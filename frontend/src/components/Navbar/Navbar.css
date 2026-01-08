@@ -1,0 +1,150 @@
+/* ---------------- NAVBAR ---------------- */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #003D6B; /* Dark navy */
+  padding: 10px 20px;
+  color: #fff;
+}
+
+/* Search Bar */
+.navbar-search {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  max-width: 500px;
+  margin: 0 20px;
+  background: #fff;
+  border-radius: 50px; /* pill shape */
+  overflow: hidden;
+}
+
+.navbar-search input {
+  flex: 1;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 50px;
+  outline: none;
+  font-size: 14px;
+}
+
+.navbar-search button {
+  background-color: #EDA415; /* Mustard yellow */
+  color: #fff;
+  border: none;
+  padding: 8px 20px;
+  cursor: pointer;
+  border-radius: 50px;
+  font-weight: bold;
+}
+
+.navbar-right {
+  display: flex;
+  gap: 20px;
+  font-size: 14px;
+}
+
+.nav-icon {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+  color: #fff;
+}
+
+.nav-icon svg {
+  stroke: currentColor;
+  fill: none;
+}
+/* wishlist */
+
+/* Wishlist dropdown container */
+.wishlist-dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 320px;
+  background: #fff;
+  box-shadow: -2px 0 10px rgba(0,0,0,0.15);
+  border-radius: 0 0 8px 8px;
+  overflow-y: auto;
+  max-height: 85vh;
+  z-index: 999;
+}
+
+/* Header */
+.wishlist-header {
+  background: #003d6b;
+  color: #fff;
+  padding: 14px;
+  font-size: 16px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Each item row */
+.wishlist-item {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  gap: 12px;
+  border-bottom: 1px solid #eee;
+}
+
+/* Product image */
+.wishlist-img {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  background: #f9f9f9;
+}
+
+/* Text section */
+.wishlist-details {
+  flex: 1;
+}
+
+.wishlist-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 4px;
+}
+
+.wishlist-price {
+  font-size: 14px;
+  font-weight: 600;
+  color: #eda415;
+  margin-bottom: 4px;
+}
+
+.wishlist-rating {
+  font-size: 12px;
+  color: #ffb400;
+}
+
+/* Remove button */
+.wishlist-remove {
+  background: none;
+  border: none;
+  font-size: 18px;
+  color: #555;
+  cursor: pointer;
+}
+
+.wishlist-remove:hover {
+  color: #d00;
+}
+
+/* Empty state */
+.empty {
+  padding: 20px;
+  text-align: center;
+  color: #777;
+}
+

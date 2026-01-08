@@ -1,0 +1,393 @@
+/* COLORS */
+:root {
+  --navy: #003d6b;
+  --gold: #eda415;
+  --bg: #f8f9fa;
+  --border: #e0e0e0;
+}
+
+/* LAYOUT */
+.home-container {
+  display: flex;
+  min-height: 100vh;
+  background: var(--bg);
+}
+
+/* SIDEBAR */
+.sidebar {
+  width: 20%;
+  min-width: 220px;
+  background: #fff;
+  border-right: 1px solid var(--border);
+  padding: 20px;
+}
+
+.sidebar h3 {
+  color: var(--navy);
+  margin-bottom: 15px;
+}
+
+.category-list {
+  list-style: none;
+  padding: 0;
+}
+
+.category-item {
+  padding: 8px 0;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.expandable span {
+  float: right;
+}
+
+.sub-category {
+  padding-left: 15px;
+  margin-top: 5px;
+}
+
+/* MAIN CONTENT */
+.content {
+  flex: 1;
+  padding: 20px;
+}
+
+/* TOP BAR */
+.content-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.breadcrumb {
+  color: var(--navy);
+  font-size: 14px;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.outline-btn {
+  padding: 8px 15px;
+  border-radius: 25px;
+  border: 1px solid var(--gold);
+  background: #fff;
+  color: var(--gold);
+  cursor: pointer;
+}
+
+.solid-btn {
+  padding: 8px 18px;
+  border-radius: 25px;
+  border: none;
+  background: var(--gold);
+  color: #fff;
+  cursor: pointer;
+}
+
+/* PRODUCT GRID */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.product-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 15px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.wishlist {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #e7f1f9;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--navy);
+  cursor: pointer;
+}
+
+.product-card img {
+  width: 150px;
+  margin-bottom: 10px;
+}
+
+.product-card h4 {
+  color: var(--navy);
+  font-size: 15px;
+}
+
+.price {
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+.rating {
+  color: var(--gold);
+}
+
+/* FOOTER */
+.content-footer {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pagination span {
+  margin: 0 5px;
+  padding: 6px 10px;
+  cursor: pointer;
+}
+
+.pagination .active {
+  background: var(--gold);
+  color: #fff;
+  border-radius: 50%;
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .sidebar {
+    display: none;
+  }
+}
+
+@media (max-width: 576px) {
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .action-buttons {
+    flex-direction: column;
+  }
+}
+.category {
+  margin-bottom: 10px;
+}
+
+.category-title {
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  font-weight: 500;
+  padding: 6px 0;
+}
+
+.sub-categories {
+  padding-left: 15px;
+  margin-top: 5px;
+}
+
+.sub-categories label {
+  display: block;
+  font-size: 14px;
+  cursor: pointer;
+}
+.category-item.active,
+.category-title.active {
+  font-weight: bold;
+  color: #003D6B;
+}
+/* ---------------- MODAL OVERLAY ---------------- */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6); /* dim background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+/* Modal box */
+.modal-box {
+  background: #fff;
+  border-radius: 12px;
+  padding: 30px 20px;
+  width: 350px;
+  max-width: 90%;
+  text-align: center;
+}
+
+/* Modal title */
+.modal-box h2 {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Input field */
+.modal-box input {
+  width: 100%;
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  outline: none;
+}
+
+/* Buttons container */
+.modal-buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+/* ADD Button */
+.add-btn {
+  flex: 1;
+  background-color: #EDA415; /* gold */
+  color: #fff;
+  border: none;
+  padding: 10px 0;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* DISCARD Button */
+.discard-btn {
+  flex: 1;
+  background: #fff;
+  border: 1px solid #ccc;
+  color: #333;
+  padding: 10px 0;
+  border-radius: 8px;
+  cursor: pointer;
+}
+/* Use same .modal-overlay and .modal-box from Add Category modal */
+
+/* Dropdown inside modal */
+.modal-box select {
+  width: 100%;
+  padding: 10px 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin-bottom: 15px;
+  font-size: 14px;
+  outline: none;
+}
+.variant-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+/* ---------------- MODAL OVERLAY ---------------- */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* ---------------- MODAL BOX ---------------- */
+.modal-box {
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  width: 450px; /* increase from maybe 350px */
+  max-width: 90%; /* responsive on smaller screens */
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Inputs, textareas, selects */
+.modal-box input,
+.modal-box select,
+.modal-box textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  outline: none;
+  box-sizing: border-box;
+}
+
+/* Variant row inputs */
+.variant-row input {
+  flex: 1; /* distribute space equally */
+}
+
+/* Buttons */
+.modal-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+.add-btn {
+  background-color: #f5a623;
+  border: none;
+  padding: 10px 20px;
+  color: #fff;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.discard-btn {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+/* PAGINATION */
+
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 30px 0;
+}
+
+.pages button {
+  border: none;
+  background: none;
+  margin: 0 5px;
+  cursor: pointer;
+  color: #999;
+  font-size: 14px;
+}
+
+.pages button.active {
+  background: #eda415;
+  color: white;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+}
+
+.count,
+.rows {
+  color: #777;
+  font-size: 14px;
+}

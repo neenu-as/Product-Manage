@@ -1,0 +1,155 @@
+/* PAGE */
+.product-details-page {
+  display: flex;
+  gap: 40px;
+  padding: 40px;
+  background: #ffffff;
+}
+
+/* LEFT IMAGE SECTION */
+.product-left {
+  flex: 1;
+}
+
+.product-left img {
+  width: 100%;
+  max-width: 420px;
+  border-radius: 12px;
+  border: 1px solid #e0e0e0;
+  padding: 20px;
+  background: #fff;
+}
+
+/* RIGHT CONTENT */
+.product-right {
+  flex: 1;
+}
+
+.product-right h2 {
+  font-size: 24px;
+  color: #003d6b;
+  margin-bottom: 10px;
+}
+
+.product-right h3 {
+  font-size: 22px;
+  color: #000;
+  margin-bottom: 12px;
+}
+
+/* STOCK INFO */
+.product-right p {
+  font-size: 14px;
+  color: #555;
+  margin: 6px 0;
+}
+
+.product-right p b {
+  color: #28a745;
+}
+
+/* RAM OPTIONS */
+.ram-options {
+  margin-top: 20px;
+}
+
+.ram-options span {
+  font-size: 14px;
+  margin-right: 10px;
+}
+
+.ram-options button {
+  margin-right: 10px;
+  padding: 6px 14px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background: #f5f5f5;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.ram-options button:hover {
+  background: #eda415;
+  color: #fff;
+}
+
+.ram-options .active {
+  background: #eda415;
+  color: #fff;
+  border-color: #eda415;
+}
+
+/* QUANTITY */
+.quantity {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 20px;
+}
+
+.quantity button {
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background: #f0f0f0;
+  cursor: pointer;
+}
+
+.quantity span {
+  font-size: 16px;
+  width: 30px;
+  text-align: center;
+}
+
+/* ACTION BUTTONS */
+.actions {
+  display: flex;
+  gap: 16px;
+  margin-top: 30px;
+}
+
+.edit-btn {
+  padding: 12px 22px;
+  border-radius: 25px;
+  border: 2px solid #eda415;
+  background: transparent;
+  color: #eda415;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.buy-btn {
+  padding: 12px 26px;
+  border-radius: 25px;
+  border: none;
+  background: #eda415;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .product-details-page {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .product-left img {
+    max-width: 100%;
+  }
+}
+.back-btn {
+  background: transparent;
+  border: none;
+  color: #003d6b;
+  font-size: 14px;
+  cursor: pointer;
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+
+.back-btn:hover {
+  text-decoration: underline;
+}
